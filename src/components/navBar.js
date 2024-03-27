@@ -277,21 +277,18 @@ return(
               </Col>
               <Col sm={columnsm} >
                 <Nav className="navtop" activeKey="/home">
+                  <Nav.Link  href="SignUp">SignUp</Nav.Link>
                   <Nav.Link className= 'unactive-link'>Career <FaExternalLinkAlt className="exticon" /></Nav.Link>
                   <DropdownButton className={activeLink === 'help'? 'active-drop': 'drop'} onClick={()=> onUpdateLink('help')} id="help" title="Help">
                     <Dropdown.ItemText>HELP & FAQS</Dropdown.ItemText>
-           
                     <Link to="/Help">
                       <Button id="but-help" >Get Answer</Button>
                     </Link>
-              
                     <Dropdown.Divider/>
                     <Dropdown.ItemText>NEED TO REACH US?</Dropdown.ItemText>
-                   
                     <Link to="/ContactUs">
                       <Button id="but-help1" >Contact Us</Button>
                     </Link>
-               
                   </DropdownButton>
                   <DropdownButton className={activeLink === 'currency'? 'active-drop': 'drop'} onClick={()=> onUpdateLink('currency')} id="dropdown-item-button" title={selectedCurrency}>
                     <Dropdown.ItemText className="currency-text">SELECT YOUR CURRENCY?</Dropdown.ItemText>

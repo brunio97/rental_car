@@ -162,7 +162,14 @@ div.col-sm-1{
   padding-right: 5%;
 }
 .navtop .nav-link{
-  color: #121212;
+  padding: 6px 12px;
+  margin:auto 0 auto 10px;
+  color: #fff;
+}
+.navtop .nav-link:hover{
+  background-color: #169a59;
+  border-radius: 20% 20% 20% 20%;
+  color: #fff;
 }
 .exticon{
   margin: 0 0 2px 0;
@@ -188,7 +195,7 @@ div.col-sm-1{
   color: #fff;
 }
 .NavBar .navtop .unactive-link.nav-link:hover{
-  border: 1px solid #169a59 ;
+ 
   background-color: gray;
   border-radius: 20% 20% 20% 20%;
 }
@@ -1115,6 +1122,88 @@ border: 1px solid #9b9b9b;
 }
 .about-us .road-trip-img{
   height: 50%;
+}
+/**********SignUp*************/
+.sign-up{
+  padding: 0;
+  transition:  0.32s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  width: 100vw;
+}
+.sign-up .container{
+  width: fit-content;
+  margin:3% auto ;
+  border: 2px solid #127e4a;
+  border-radius: 10%;
+  padding: 2%;
+  background-color: #fff;
+}
+.sign-up h1{
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.sign-up p{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+.sign-up p{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+.sign-up .form-group{
+  margin: 2% auto;
+  padding: 0;
+}
+.sign-up .form-group label{
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.sign-up .form-control{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+.sign-up .form-control::placeholder{
+  color: #9b9b9b;
+  font-style: italic;
+  font-size: 16px;
+  display: inline-block;
+}
+.sign-up .btn-group{
+  margin: 3% ;
+  background-color: #169a59;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #127e4a;
+  border-radius: 3%;
+}
+.sign-up .btn-group button{
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  border: 1px solid transparent;
+}
+.sign-up .btn-group .first-but:hover{
+  background-color: #006539;
+  border: 1px solid #127e4a;
+  border-radius: 3%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+.sign-up .btn-group .last-but:hover{
+  background-color: #c4302b;
+  border: 1px solid #c4302b;
+  border-radius: 3%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
 }
 /**/
 .App {
