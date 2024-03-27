@@ -1,5 +1,1126 @@
-.App {
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color:aliceblue;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+hr{ 
+  height: 5px; 
+  background-color: #006539; 
+  color: #006539;
+  margin: 20px 0;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
+
+
+
+/********** navBar ***********/
+nav.navbar {
+  padding: 0px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  transition:  0.32s ease-in-out;
+
+}
+div.navtop.navbar-nav{
+  padding: 10px 0 0 0;
+  margin: 0;
   text-align: center;
+}
+div.navbot.navbar-nav{
+  padding: 10px 0 0 0;
+  margin: 0 18px 0 0;
+}
+div.col-sm-12{
+  padding: 0;
+  margin: 0;
+  background-color: #169a59;
+}
+.NavBar div.container-fluid{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar.navbar-expand.navbar-light{
+  background-color: #006539
+}
+.onon{
+  display: none;
+  visibility: hidden;
+}
+.NavBar .navbar-toggler{
+  width: 10%;
+  margin-left: 85%;
+  margin-right: 10%;
+  z-index: 9999;
+  margin-top: 18px;
+}/*esta clase cuando se explande togler*/
+.NavBar .resize-nav .container{
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* flex-direction:row;ojo */
+  flex-wrap: wrap;
+  background-color: #006539
+}
+.NavBar .resize-nav .navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background-color:#006539;
+}
+.NavBar .resize-nav .navbar-brand{
+  text-align: center;
+  margin-left: 2%;
+}
+div.col-sm-11{
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  padding-right: 3%;
+}
+div.row{
+  background-color:#006539;
+}
+div.col-sm-1{
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+.NavBar .navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background-color:#006539;
+}
+
+.NavBar .navtop {
+  justify-content: end;
+  padding-top: 18px;
+  background-color: #006539;
+  padding-right: 5%;
+}
+.navtop .nav-link{
+  color: #121212;
+}
+.exticon{
+  margin: 0 0 2px 0;
+  color: #fff;
+  width: 13px;
+  height: 13px
+}
+.exticon1{
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+
+.NavBar .navtop .navbar-links.nav-link{
+  color: #fff;
+  padding: 6px 12px;
+  margin:auto 0 auto 10px;
+}
+.NavBar .navtop .unactive-link.nav-link{
+  padding: 6px 12px;
+  margin:auto 0 auto 10px;
+  color: #fff;
+}
+.NavBar .navtop .unactive-link.nav-link:hover{
+  border: 1px solid #169a59 ;
+  background-color: gray;
+  border-radius: 20% 20% 20% 20%;
+}
+.NavBar .navtop .navbar-links.nav-link:hover{
+  border: 1px solid #169a59 ;
+  background-color: #169a59;
+  border-radius: 20% 20% 20% 20%;
+}
+.navtop a.dropdown-item{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  text-align: center;
+}
+#but-help,#but-help1{
+  background-color: #169a59;
+}
+#but-help:hover,#but-help1:hover{
+  background-color: #006539;
+}
+button#but-help.active.btn.btn-primary{
+  background-color: #000;
+}
+.NavBar .navtop .drop.dropdown{
+  padding: 10px 10px;
+  margin:auto 0;
+}
+.NavBar .navtop .drop.dropdown button{
+  background-color: #006539;
+  border: none;
+}
+.NavBar .navtop .drop.dropdown button:hover{
+  border:none;
+  background-color: #169a59;
+  border-radius: 20% 20% 20% 20%;
+}
+.NavBar .navtop .active-drop.dropdown button{
+  border: 3px solid #61dafb ;
+  background-color: #169a59;
+}
+
+.NavBar div.col-sm-12{
+  width: 100%;
+  margin: 0; 
+  padding: 0;
+}
+
+.NavBar .colo #pills-tab{
+  margin:0;
+  padding: 0;
+}
+.NavBar .nav-item{
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #006539;
+
+}
+.NavBar .colo .nav-pills button{
+  color: #fff;
+  background-color: #169a59;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  border: 1px solid #006539;
+  border-radius: 0;
+}
+.NavBar .colo .nav-pills button:hover, .NavBar .colo .nav-pills:hover{
+  background-color: #127e4a;
+}
+.c-bot .unavailable{
+  color: gray;
+}
+.c-botc, .c-bot {
+  border-left: 1px solid #282c34;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+}
+.c-botc{
+  border-left: none;
+}
+.rowc{
+  width: 100vw;
+}
+.c-bot .container{
+  width: 90%;
+  margin-top: 5%;
+  text-align: left;
+}
+.c-bot h2{
+  color: #121212;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+.c-bot a{
+  color: #169a59;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.c-bot .pila{
+  color: #169a59;
+  height: 13px;
+}
+
+div.dropdown-menu.show {
+  background-color: #fff;
+  width: auto;
+  height: auto;
+}
+div.dropdown-menu.show .dropdown-item{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px 50px 50px 50px;
+}
+
+
+.currency-text{
+  font-weight: bold;
+  font-size: 15px;
+}
+.currency-text .dropdown-item{
+  font-size: 15px;
+}
+div.form-check{
+  margin-left: 20px;
+}
+
+
+nav.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+  display: none;
+  visibility: hidden;
+}
+
+/*********** Banner ************/
+.banner{
+  background-image: url('assets/road.jpg');
+  background-size:100%;
+  width: 100vw;
+  transition:  0.32s ease-in-out;
+  height: fit-content;
+}
+.banner .centered-form {
+  border: 1px solid #b8b8b8;
+  background-color: #fff;
+  padding: 0;
+  margin: 5% auto;
+  border-radius: 4%;
+  width: 70%;
+}
+.banner h1{
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  width: auto;
+  text-align: center;
+}
+.banner .banner-res{
+  margin: 0 0 2% 0;
+  padding: 0;
+}
+.banner div.col{
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.banner .form-control, .banner .form-select{
+  border: 1px solid #282c34;
+  width: 100%;
+}
+.banner .form-label{
+  padding: 3px 0 0 0;
+  margin: 0;
+}
+.banner #time,#time1,#date,#date1{
+  color: #169a59;
+  border: 1px solid #282c34;
+  margin: 1%;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.banner button{
+  margin: 1% 0;
+  background-color: #169a59;
+  border: 1px solid #169a59;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.banner button:hover{
+  background-color: #127e4a;
+}
+.banner div.col-sm-3, .banner div.col-sm-9{
+  background-color: #fff;
+}
+/****** landingPage ******/
+.landing-page{
+ width: 100vw;
+ top: 0;
+ transition:  0.32s ease-in-out;
+ margin: 8% auto;
+}
+.landing-page .container{
+  width: 85%;
+  margin: 0 auto;
+}
+.landing-page div.col-sm-4{
+  margin: 0;
+  padding: 0 20px;
+}
+.landing-page .row,.landing-page .col{
+  background-color:transparent;
+}
+.landing-page .card{
+  background-color: #fff;
+  border: 1px solid #282c34;
+  height:100%;
+}
+.landing-page .card-title a,.landing-page .card-title{
+  color: #169a59;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.landing-page .card-text{
+  color: #000;
+  font-weight: 250;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.landing-page a{
+  color: #169a59;
+  margin: 3% auto 0 auto;
+  text-decoration: none;
+}
+.landing-page .icon-card{
+  width: 50px;
+  height: 50px;
+}
+/*carousel*/
+.landing-page .fleet{
+  display: flex;
+  flex-direction: column;
+  margin: 3% auto;
+  text-align: center;
+}
+.landing-page .fleet h2{
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin-top: 5%;
+} 
+.landing-page .fleet .btn.btn-primary{
+  width: 45%;
+  background-color: #169a59;
+  color: #fff;
+}
+.landing-page .fleet .btn.btn-primary:hover{
+  width: 45%;
+  background-color: #006539;
+  color: #fff;
+}
+.landing-page .fleet .carousel{
+  width: 80%;
+  border: 1px solid #282c34;
+  background-color: #fff;
+  border-radius: 5%;
+  margin: 0 auto 1% auto;
+}
+.landing-page .fleet .carousel-item img{
+width: 50%;
+margin: 9% 25%;
+padding: 0;
+}
+.landing-page .fleet .carousel-control-next-icon, .landing-page .fleet .carousel-control-prev-icon{
+  background-color: #169a59;
+  color: #fff;
+}
+.landing-page .fleet .carousel-control-next-icon:hover, .landing-page .fleet .carousel-control-prev-icon:hover{
+  background-color: #006539;
+  color: #fff;
+}
+.landing-page .fleet .carousel-caption{
+  color: #000;
+  text-align: center;
+  top: 0px;
+}
+.landing-page .fleet h3{
+  color: #006539;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-decoration: underline;
+  text-decoration-color: #006539;
+}
+
+.landing-page .carousel-indicators{
+  margin-bottom: 5px;
+}
+.landing-page .carousel-indicators button{
+  background-color: #169a59;
+  height: 5px;
+}
+.landing-page .carousel-indicators button:hover{
+  background-color: #006539;
+  height: 5px;
+}
+.landing-page button{
+  width: auto;
+  background-color: #169a59;
+  border: 1px solid #169a59;
+  font-size: 18px;
+  font-weight: 450;
+  letter-spacing: 0.8px;
+}
+.landing-page button:hover{
+  background-color: #006539;
+}
+
+/*offerings*/
+.latest-offering {
+  width: 95%;
+}
+.latest-offering h2{
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  margin-bottom: 3%;
+}
+.latest-offering .card{
+  height: 100%;
+}
+.latest-offering .card-body{
+  display: flex;
+  flex-direction: column;
+}
+.latest-offering .card-title{
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.latest-offering .card-text{
+  color: #000;
+  font-weight: 450;
+  letter-spacing: 0.8px;
+}
+.latest-offering button{
+  border: 1px solid #282c34;
+}
+.latest-offering button:hover{
+  background-color: #006539;
+}
+/*programs*/
+.programs{
+  margin: 3% auto;
+}
+.programs h2{
+  text-align: center;
+  margin-bottom: 3%;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+.programs .card{
+  width: 80%;
+  border: 1px solid #b8b8b8;
+} 
+.programs .card-body{
+  display: flex;
+  flex-direction: column;
+}
+.programs a{
+  color: #9b9b9b;
+}
+.programs .card-text{
+  color: #000;
+  font-weight: 450;
+  letter-spacing: 0.8px;
+}
+.programs button{
+  margin: 0 auto;
+}
+.programs .row.prog-view {
+  display: absolute;
+}
+.landing-page .culture{
+  margin-top: 3%;
+}
+.landing-page .culture .card-body{
+  display: flex;
+  flex-direction: column;
+}
+.landing-page .culture .btn.btn-primary{
+background-color: #169a59;
+color: #fff;
+}
+.landing-page .culture .btn.btn-primary:hover{
+  background-color: #006539;
+  color: #fff;
+  }
+/********** footer **************/
+.footer{
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-lg{
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display:flex ;
+  flex-direction: column;
+}
+.footer .footer-lg .container{
+  background-color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+.footer .footer-lg h2,.footer .footer-lg a,.footer .footer-lg .unavailable{
+  margin: 0;
+  padding: 0;
+}
+.footer .footer-lg img {
+  width: 40%;
+  margin: 3% 0;
+}
+.footer .footer-lg .row-icons-footer{
+  background-color: #006539;
+  width: 100vw;
+  text-align: end;
+  height: 75px;
+}
+
+.footer .footer-lg .row-icons-footer a{
+  margin: 0 3%;
+  padding: 0;
+}
+.footer .footer-lg .row-icons-footer .icon-footer{
+  height: 43px;
+  margin: 1% 0;
+  padding: 0;
+  width: auto;
+}
+.footer .footer-lg .row-links-footer{
+  background-color: #006539;
+  width: 100vw;
+  height: 75px;
+}
+.footer .footer-lg .row-links-footer a{
+  margin: 0 3%;
+  color: #fff;
+}
+.footer .footer-lg br{
+  height: 5px;
+}
+#facebook{
+  color: #537edb;
+}
+#youtube{
+  color: #c4302b;
+}
+#twitter{
+  color: #1DA1F2 ;
+}
+.footer .footer-lg div.container{
+  margin-bottom: 5%;
+}
+
+
+.footer .footer-small{
+  margin: 3% 0;
+  background-color: #b8b8b8;
+  padding: 0;
+}
+.footer .footer-small .row{
+  background-color: #f4f4f4;
+  text-align: center;
+  width: 100vw;
+}
+.footer .footer-small div.dropdown{
+  width: 100%;
+}
+.footer .footer-small div.dropdown button{
+  width: 100%;
+  background-color: #169a59;
+  border-radius: 0;
+  border: 2px solid #006539;
+}
+.footer .footer-small div.dropdown button:hover{
+  background-color: #006539;
+}
+.footer .footer-small div.dropdown-menu.show{
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .footer-small a{
+  color: #169a59;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.footer .footer-small .unavailable{
+  color: gray;
+}
+/*********** CarRental *************/
+.car-rental .container{
+  padding: 0px 0;
+  width: 80%;
+  top: 0;
+  z-index: 1;
+  transition:  0.32s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  margin: 3% auto;
+  background-color: #f4f4f4;
+}
+
+.car-rental .container .row{
+  background-color: #f4f4f4;
+}
+.car-rental .container a{
+  color: #127e4a;
+  margin: 3% 0;
+}
+.car-rental .container h1,h6{ 
+  display: inline; 
+  margin: 0; 
+  padding: 5px;
+  
+}
+.car-rental h1{
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.car-rental h6{
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+.car-rental p{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  margin: 2% 0;
+}
+.car-rental .btn.btn-primary{
+  border-radius: 20px; 
+  padding: 10px 20px; 
+  background-color: #169a59; 
+  color: white; 
+  border: 1px solid #006539;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  z-index: 9999;
+}
+.car-rental .btn.btn-primary:hover{
+  background-color: #006539;
+}
+/********** CurrentDeals ************/
+.current-deals{
+  padding: 0px 0;
+  transition:  0.32s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+.current-deals .container{
+  width: 80%;
+  margin: 3% auto;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.current-deals .container .row{
+  background-color: #f4f4f4;
+}
+.current-deals .container h1{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.current-deals .container h2{
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.current-deals .container h3{
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #282c34;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10%;
+}
+/**************** banner-car *************/
+.banner-car{
+  padding: 0;
+  transition:  0.32s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  width: 100vw;
+}
+.banner-car .container{
+  width: 100%;
+  margin: 3% auto;
+  padding: 0;
+}
+.banner-car .row{
+  background-color: #f4f4f4;
+  width: 100%;
+}
+.banner-car .row-cars{
+ display: inline-block;
+ width: 33.33%;
+}
+.banner-car h1{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.banner-car h2{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.banner-car p{
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+/*********** Cars-Compact****************/
+.style-car{
+  padding: 0;
+  transition:  0.32s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100vw;
+  margin: 0 auto;
+}
+.style-car .container{
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.style-car .row{
+  background-color: #fff;
+  width: 100%;
+}
+.style-car .row-cars{
+ display: inline-block;
+ width: 33.33%;
+}
+.style-car .col-sm-10{
+  margin: auto;
+}
+.style-car .col-sm-2{
+  margin: auto;
+}
+.style-car a{
+  width: 100%;
+  text-align: center;
+}
+.style-car button{
+  background-color: #169a59;
+  border: none;
+}
+.style-car button:hover{
+  border: 1px solid #006539 ;
+  background-color: #006539;
+}
+.style-car button:focus {
+  background-color: #004026;
+}
+.style-car h1{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.style-car h2{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.style-car p{
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.style-car .container .card-column{
+  width: 30%;
+  display: inline-block;
+  margin: 5% 1%;
+  }
+  .style-car .container .card-column-one{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 1%;
+    }
+.style-car .container .card-column .card{
+width: 100%;
+height: 100%;
+border: 1px solid #9b9b9b;
+}
+.style-car .container .card-column .card-body{
+  text-align: center;
+}
+.style-car .container .card-column .card-body .card-title{
+  color: #169a59;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.style-car .container .card-column .card-body .card-text{
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+}
+.style-car .container .card-column .list-group-item{
+  text-align: center;
+  color: #9b9b9b;
+  font-size: 14px;
+}
+.style-car .container .card-column button{
+  background-color: #169a59; 
+  border: none; 
+  color: white; 
+  padding: 5px 0; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px auto;
+  cursor: pointer; 
+  border-radius: 10px; 
+  transition: 0.3s; 
+  width: 70%;
+}
+.style-car .container .card-column button:hover{
+  background-color: #006539; 
+  border: none;
+  color: white; 
+  padding: 5px 0; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block; 
+  font-size: 16px;
+  margin: 4px auto;
+  cursor: pointer; 
+  border-radius: 10px; 
+  transition: 0.3s; 
+  width: 70%;
+}
+.style-car .explore{
+  text-align: center;
+  margin: 2% auto;
+  width: 75%;
+}
+/*********** car-info ************/
+.style-car .car-info{
+  margin: 3% auto;
+}
+.style-car .car-info .desc{
+  font-size: 20px;
+  letter-spacing: 0.8px;
+}
+.style-car .car-info h1, .style-car .car-info p{
+  margin: 3% auto;
+}
+.style-car .car-info h2{
+  font-weight: 700;
+  margin: 3% auto;
+}
+.style-car .car-info h3{
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  margin: 3% auto;
+}
+.style-car .car-info p,.style-car .car-info li{
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  margin: 3% auto;
+}
+/********* accident ***********/
+.accident{
+  width: 100%;
+}
+.accident .container{
+  width: 100%;
+  margin: 3% auto;
+}
+.accident .row{
+  background-color: #f4f4f4;
+  margin: 3%;
+}
+.accident img{
+  width: 100%;
+}
+.accident .img-a{
+  text-align: center;
+}
+.accident h1{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.accident h3{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.accident p{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+.accident li{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  margin: 3%;
+}
+.accident .card{
+  height: 100%;
+}
+.accident .icons-accident{
+  margin: 3% auto;
+  width: 100%;
+  text-align: center;
+}
+.accident .icons-accident svg{
+  width: 50px;
+  height: 50px;
+  color: #169a59;
+}
+/*********** about-us *************/
+.about-us{
+  width: 90%;
+  margin: 3% auto;
+}
+.about-us .row{
+  background-color: #f4f4f4;
+  margin: 3%;
+}
+.about-us h1{
+  margin: 3% 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.about-us h2{
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.about-us h3{
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin: 3% 0;
+}
+.about-us h4{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.about-us p{
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+.about-us .contact-us-cards{
+  text-decoration: none;
+  margin: 0;
+}
+.about-us .contact-us-cards .icon-contact-us-card{
+  width: 100%;
+  text-align: center;
+}
+.about-us .contact-us-cards .icon-contact-us-card svg{
+  margin: 3%;
+  height: 75px;
+  width: 75%;
+}
+.carousel{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.about-us .icon-person{
+  width: 100%;
+  text-align: center;
+}
+
+.about-us .icon-person svg{
+  height: 100%;
+  width: 100%;
+}
+.about-us .row-person{
+  background-color: #169a59;
+}
+.about-us .row-person .col{
+  width: 10%;
+}
+.about-us .about-personal{
+  width: 80%;
+}
+.about-us .road-trip-img{
+  height: 50%;
+}
+/**/
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
 }
 
 .App-logo {
