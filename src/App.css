@@ -344,6 +344,7 @@ nav.scrolled {
   transition:  0.32s ease-in-out;
   height: fit-content;
 }
+
 .banner .centered-form {
   border: 1px solid #b8b8b8;
   background-color: #fff;
@@ -399,6 +400,31 @@ nav.scrolled {
 }
 .banner div.col-sm-3, .banner div.col-sm-9{
   background-color: #fff;
+  text-align: center;
+  margin: auto;
+}
+.banner .row{
+  background-color: #fff;
+}
+.banner input, .banner select{
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.banner .priceCar {
+ 
+
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.banner label{
+  background-color: #169a59;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.8px;
 }
 /****** landingPage ******/
 .landing-page{

@@ -1,0 +1,107 @@
+
+          {/* <Form className="centered-form">
+            <h1 >Reserve a Vehicle</h1>
+            <Row className="banner-res">
+                <Form.Group as={Col} >
+                  <Form.Label>City</Form.Label>
+                  <Form.Control />
+                </Form.Group>
+                <Form.Group as={Col} >
+                  <Form.Label>Zip</Form.Label>
+                  <Form.Control/>
+                </Form.Group>
+            </Row>
+            <Row className="banner-res">
+              <Col sm={carSelected[0] ? 6:null}>
+              <Form.Group as={Col} >
+              <Form.Label>Type of Car</Form.Label>
+                <Form.Select onChange={handleSelectChange}>
+                  <option value="" >Select your type of car:</option>
+                  <option value="compact">Compact Cars</option>
+                  <option value="SUV">SUVs</option>
+                  <option value="truck">Truck</option>
+                  <option value="vans">Vans</option>
+                  <option value="luxury">Luxury Cars</option>
+                  <option value="awd">AWD, 4x4 Cars</option>
+                </Form.Select>
+              </Form.Group>
+              </Col>
+
+              {carSelected[0]?(
+              <Col >
+              <Form.Group as={Col} >
+                <Form.Label>{titleCar}</Form.Label>
+                <Form.Select value={selectedValueCar} onChange={handleSelectChangeCar}>
+                  <option>Select your type of car:</option>
+                  {typeCar.map((car,index)=>(
+                    <option key={index} value={car.title}>{car.text}</option>
+                  ))}
+                </Form.Select>
+              </Form.Group>
+              </Col>
+              ):(
+              null
+              )
+            }
+            </Row>
+           
+            {carSelected[1]?(
+              <Row className="banner-res">
+                
+                  {typeCarImg.map((car,index)=>(
+                    <img key={index} src={car.img} alt={`Car ${car.title}`} style={{ width: '50%', margin:'auto' }}/>
+                  ))}
+        
+              </Row>
+              ):(
+              null
+              )
+            }
+            <Row className="banner-res">  
+              <Form.Group as={Col} >
+                <Form.Label>Pick-up</Form.Label>
+                <Form.Control type="date" id="date" name="date"/>
+                <Form.Control type="time" id="time" name="time"/>
+              </Form.Group>
+              <Form.Group as={Col} >
+                <Form.Label>Return</Form.Label>
+                <Form.Control type="date" id="date1" name="date"/>
+                <Form.Control type="time" id="time1" name="time"/>
+              </Form.Group>
+              <Form.Group as={Col} >
+                <Form.Label>Render Age</Form.Label>
+                <Form.Select >
+                  <option >Select your age:</option>
+                  <option value='18'>18</option>
+                  <option value='19'>19</option>
+                  <option value='20'>20</option>
+                  <option value='21'>21</option>
+                  <option value='22'>22</option>
+                  <option value='23'>23</option>
+                  <option value='24'>24</option>
+                  <option value='25+'>25+</option>
+                </Form.Select>
+              </Form.Group>
+            </Row>
+            <Row className="banner-res">
+              <Col sm={6}>
+              <Form.Group as={Col} >
+                  <Form.Label>Corporate Account Number</Form.Label>
+                  <Form.Control type="number" pattern="[+]?[0-9\s-]*" placeholder="+1 XXX XXX XXXX" />
+                </Form.Group>
+              </Col>
+              <Col sm={6}>
+              <Form.Group as={Col} >
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="name@example.com" />
+              </Form.Group>
+              </Col>
+            </Row>
+            <Row className="banner-res">
+              <Col sm={3}>
+                  <Button type="submit">
+                    Browse Vehicles
+                  </Button>
+                </Col>    
+            </Row>
+          </Form> */}

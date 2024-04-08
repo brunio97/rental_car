@@ -83,6 +83,9 @@ const CarInfo =()=>{
                 </Container>
                 </div>
             ))}
+            <Link to="/">
+                <Button >Go to Reservation!</Button>
+            </Link>
             </Container>
 
             <Container className="explore">
