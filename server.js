@@ -42,9 +42,12 @@ router.post("/banner", (req, res) => {
   const age = req.body.age;
   const number = req.body.number;
   const email = req.body.email;
+  const sender = email;
+  
+  const recipient = [sender, "bfsv97@gmail.com"];
   const mail = {
     from: email,
-    to: "bfsv97@gmail.com",
+    to: recipient.join(),
     subject: "Contact Form Rental-Car",
     html: `Your reservation's info:
            <p>City: ${city}</p>
