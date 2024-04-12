@@ -151,7 +151,7 @@ const Banner = () => {
                 {carSelected[0]?(
                 <Col >
                   <label>{titleCar}</label><br/>
-                  <select value={selectedValueCar} id="model" name="model" onChange={(e) => {
+                  <select value={selectedValueCar} id="model" name="model[]" onChange={(e) => {
                     setModel(e.target.value);
                     handleSelectChangeCar(e);
                   }} required >
