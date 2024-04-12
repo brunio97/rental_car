@@ -29,6 +29,67 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <div>
+      <form name="rentalcars" data-netlify="true" hidden>
+        
+            <input type="text"  name="first-name" id="first-name" />
+          
+            <input type="text" name="city" id="city"  required/>
+            <input type="text" name="zip" id="zip" required/>
+            <select id="type" name="type"  multiple required>
+              <option value="" >Select your type of car:</option>
+              <option value="compact">Compact Cars</option>
+              <option value="SUV">SUVs</option>
+              <option value="truck">Truck</option>
+              <option value="vans">Vans</option>
+              <option value="luxury">Luxury Cars</option>
+              <option value="awd">AWD, 4x4 Cars</option>
+            </select>
+
+            <select id="model" name="model" required >
+              <option value="" >Select your type of car:</option>
+              
+                  <option key={index} value={car.title}>{car.text}</option>
+             
+            </select>
+
+            <input type="date" id="pickUpDate" name="pickUpDate" required/>
+
+            <input type="time" id="pickUpTime" name="pickUpTime" required/>
+
+            <input type="date" id="returnDate" name="returnDate" required/>
+
+            <input type="time" id="returnTime" name="returnTime" required/>
+
+            <select value={price} className="priceCar"  id="price" name="price" required>
+              <option value="">Select your type of car:</option>
+              {typeCarImg.map((car,index)=>(
+                  <option key={index} value={car.price}>{car.price}</option>
+                ))}
+            </select>
+
+            <select id="age" name="age[]" required>
+              <option value="" >Select your age:</option>
+              <option value='18'>18</option>
+              <option value='19'>19</option>
+              <option value='20'>20</option>
+              <option value='21'>21</option>
+              <option value='22'>22</option>
+              <option value='23'>23</option>
+              <option value='24'>24</option>
+              <option value='25+'>25+</option>
+            </select>
+
+            <input type="tel" name="phone" id="phone" required/>  
+
+            <input type="email" name="email" id="email" required/>
+
+
+          </Col>
+        </Row>
+      </form>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
