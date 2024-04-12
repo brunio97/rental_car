@@ -28,6 +28,7 @@ const Banner = () => {
   const [phone,setPhone] = useState("")
   const [email,setEmail] = useState("")
 
+    console.log()
   const formInitialDetails = {
     city: '',
     zip: '',
@@ -122,18 +123,21 @@ const Banner = () => {
             <Row className="banner-res">
               <Col>
                 <label>City</label><br/>
-                  <input type="text" placeholder="City" value={city} name="city" id="city"  onChange={(e)=>setCity(e.target.value)} required/> 
+                  <input type="text" placeholder="City" value={city} name="city" id="city" onChange={(e)=>setCity(e.target.value)} required/> 
               </Col>
               <Col>
                 <label>Zip</label><br/>
-                  <input type="text" placeholder="zip" value={zip} name="zip" id="zip"  onChange={(e)=>setZip(e.target.value)} required/>
+                  <input type="text" placeholder="zip" value={zip} name="zip" id="zip" onChange={(e)=>setZip(e.target.value)} required/>
               </Col>
             </Row>
 
             <Row className="banner-res">
               <Col >
                 <label>Type of Car</label> <br/>
-                  <select id="type" name="type" value={type} onChange={(e)=>setType(e.target.value)} required>
+                <select id="type" name="type[]" onChange={(e) => {
+                    setType(e.target.value);
+                    handleSelectChange(e);
+                  }} required>
                     <option value="" >Select your type of car:</option>
                     <option value="compact">Compact Cars</option>
                     <option value="SUV">SUVs</option>
@@ -147,7 +151,10 @@ const Banner = () => {
                 {carSelected[0]?(
                 <Col >
                   <label>{titleCar}</label><br/>
-                  <select id="model" name="model" value={model} onChange={(e)=>setModel(e.target.value)} required >
+                  <select value={selectedValueCar} id="model" name="model" onChange={(e) => {
+                    setModel(e.target.value);
+                    handleSelectChangeCar(e);
+                  }} required >
                     <option value="" >Select your type of car:</option>
                     {typeCar.map((car,index)=>(
                         <option key={index} value={car.title}>{car.text}</option>
@@ -187,7 +194,10 @@ const Banner = () => {
               {carSelected[1]?(
                 <div className="priceCar">
                 <label>Select Price</label><br/>
-                  <select value={price} className="priceCar"  id="price" name="price" onChange={(e)=>setPrice(e.target.value)} required>
+                <select value={selectedValueCarPrice} className="priceCar"  id="price" name="price[]" onChange={(e) => {
+                    setPrice(e.target.value);
+                    handleSelectChangeCarPrice(e);
+                  }} required>
                     <option value="">Select your type of car:</option>
                     {typeCarImg.map((car,index)=>(
                         <option key={index} value={car.price}>{car.price}</option>
@@ -201,7 +211,9 @@ const Banner = () => {
                   </Col>
                   <Col sm={carSelected[1]?null:12}>
               <label>Render Age</label><br/>
-                <select id="age" name="age" value={age} onChange={(e)=>setAge(e.target.value)} required>
+              <select id="age" name="age[]" onChange={(e) => {
+                    setAge(e.target.value);
+                  }} required>
                   <option value="" >Select your age:</option>
                   <option value='18'>18</option>
                   <option value='19'>19</option>
