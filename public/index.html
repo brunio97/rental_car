@@ -36,8 +36,11 @@
             <input type="text"  name="first-name" id="first-name" />
           
             <input type="text" name="city" id="city"  required/>
+
             <input type="text" name="zip" id="zip" required/>
-            <select id="type" name="type"  multiple required>
+
+            <select id="type" name="type[]" required>
+
               <option value="" >Select your type of car:</option>
               <option value="compact">Compact Cars</option>
               <option value="SUV">SUVs</option>
@@ -47,10 +50,8 @@
               <option value="awd">AWD, 4x4 Cars</option>
             </select>
 
-            <select id="model" name="model" required >
-              <option value="" >Select your type of car:</option>
+            <select id="model" name="model[]" required >
               
-                  <option key={index} value={car.title}>{car.text}</option>
              
             </select>
 
@@ -62,11 +63,8 @@
 
             <input type="time" id="returnTime" name="returnTime" required/>
 
-            <select value={price} className="priceCar"  id="price" name="price" required>
-              <option value="">Select your type of car:</option>
-              {typeCarImg.map((car,index)=>(
-                  <option key={index} value={car.price}>{car.price}</option>
-                ))}
+            <select value={price} className="priceCar"  id="price" name="price[]" required>
+              
             </select>
 
             <select id="age" name="age[]" required>
