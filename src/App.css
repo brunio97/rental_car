@@ -735,11 +735,22 @@ color: #fff;
 
 
 
-.footer .footer-small .show.dropdown{
-  margin-bottom: 200px;
+.footer .footer-small .c0.show.dropdown {
+  margin-bottom: 175px;
   width: 100%;
 }
-
+.footer .footer-small .c1.show.dropdown, .footer .footer-small .c5.show.dropdown,.footer .footer-small .c6.show.dropdown{
+  margin-bottom: 125px;
+  width: 100%;
+}
+.footer .footer-small .c2.show.dropdown, .footer .footer-small .c7.show.dropdown{
+  margin-bottom: 100px;
+  width: 100%;
+}
+.footer .footer-small .c3.show.dropdown, .footer .footer-small .c4.show.dropdown, .footer .footer-small .c8.show.dropdown{
+  margin-bottom: 75px;
+  width: 100%;
+}
 
 
 .footer .footer-small a{

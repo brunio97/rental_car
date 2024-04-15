@@ -14,15 +14,6 @@ const FooterCar =()=>{
     const handleToggle = (nextOpenState, index) => {
         if (!isOpen[index] && nextOpenState) {
           window.scrollBy(0, 99999); 
-          
-          const element = document.getElementsByClassName('gtg')
-          console.log(element)
-          if (element){
-            console.log("acaacaa")
-           
-          }else{
-            console.log("nada")
-          } 
         } 
 
         const newIsOpen = [...isOpen];
@@ -51,11 +42,11 @@ const FooterCar =()=>{
                 {footerWidth?(
                     <Container className="footer-small">
                         <Row>
-                        <Dropdown show={isOpen[0]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 0)}>
+                        <Dropdown className="c0" show={isOpen[0]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 0)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             CAR RENTAL
                             </Dropdown.Toggle>
-                            <Dropdown.Menu className="gtg" >
+                            <Dropdown.Menu >
                                 <Link to="/CarRental">Watch All Vehicles&gt;</Link><br/>
                                 <a className="unavailable" >Viwe/Modify/Cancel&gt;</a><br/>
                                 <Link to="/CurrentDeals">All Deals & Coupons&gt;</Link><br/>
@@ -67,11 +58,11 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[1]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 1)}>
+                        <Dropdown className="c1" show={isOpen[1]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 1)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             REPLACEMENT RENTALS
                             </Dropdown.Toggle>
-                            <Dropdown.Menu>
+                            <Dropdown.Menu >
                                 <Link to="/Accident">Rent a Car After an Accident&gt;</Link><br/>
                                 <a className="unavailable" >Dealership & Service Vehicles&gt;</a><br/>
                                 <a className="unavailable">Paymant Options&gt;</a><br/>
@@ -81,7 +72,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[2]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 2)}>
+                        <Dropdown className="c2" show={isOpen[2]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 2)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUSINESSES
                             </Dropdown.Toggle>
@@ -94,7 +85,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[3]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 3)}>
+                        <Dropdown className="c3" show={isOpen[3]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 3)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             VEHICLES FOR RENT
                             </Dropdown.Toggle>
@@ -106,7 +97,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[4]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 4)}>
+                        <Dropdown className="c4" show={isOpen[4]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 4)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUY A CAR
                             </Dropdown.Toggle>
@@ -118,7 +109,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[5]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 5)}>
+                        <Dropdown className="c5" show={isOpen[5]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 5)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             CAR LOCATIONS
                             </Dropdown.Toggle>
@@ -132,7 +123,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[6]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 6)}>
+                        <Dropdown className="c6" show={isOpen[6]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 6)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             OTHER LOCATIONS
                             </Dropdown.Toggle>
@@ -146,7 +137,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown show={isOpen[7]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 7)}>
+                        <Dropdown className="c7" show={isOpen[7]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 7)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUY A CAR
                             </Dropdown.Toggle>
@@ -159,7 +150,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown  show={isOpen[8]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 8)} >
+                        <Dropdown className="c8" show={isOpen[8]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 8)} >
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             PLAN YOUR PURCHASE
                             </Dropdown.Toggle>
