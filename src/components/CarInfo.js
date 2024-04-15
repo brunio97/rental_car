@@ -7,9 +7,9 @@ import NavBar from "./navBar";
 import FooterCar from "./FooterCar";
 import ListOfCars from "./ListOfCars";
 import { Container,Row,Col,ListGroup,Button,Card } from "react-bootstrap";
-import { GetBannerMargin } from "./functions";
+import { GetBannerMargin, setwidth640 } from "./functions";
 const CarInfo =()=>{
-    const [widthx,setWidthx]=useState("")
+    const [widthx,setWidthx]=useState(setwidth640())
     const banM=GetBannerMargin();
     const infoAuxCar = localStorage.getItem('auxInfoCar')
 

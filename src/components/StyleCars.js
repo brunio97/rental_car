@@ -9,9 +9,9 @@ import FooterCar from "./FooterCar";
 import ListOfCars from "./ListOfCars";
 import ListOfTypesOfCars from "./ListOfTypesOfCars";
 import { Link, useNavigate } from "react-router-dom";
-import { getMaxHeight } from "./functions";;
+import {setwidth780 } from "./functions";
 const StyleCars=()=>{
-    const [widthx,setWidthx]=useState("")
+    const [widthx,setWidthx]=useState(setwidth780());
 
     const valAux = localStorage.getItem('auxiliar')
    

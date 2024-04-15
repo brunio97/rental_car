@@ -45,8 +45,11 @@ export function GetBannerMargin(){
   }
 
 
+export function setwidth780() {
+    return window.innerWidth < 780;
+}
 export function setwidth640() {
-    return window.innerWidth < 640;
+  return window.innerWidth < 640;
 }
 export function setWidth992(){
     return window.innerWidth <992; 
