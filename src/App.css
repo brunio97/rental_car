@@ -438,7 +438,7 @@ nav.scrolled {
   margin: 0 auto;
 }
 .landing-page div.col-sm-4{
-  margin: 0;
+  margin: 0 ;
   padding: 0 20px;
 }
 .landing-page .row,.landing-page .col{
@@ -448,6 +448,7 @@ nav.scrolled {
   background-color: #fff;
   border: 1px solid #282c34;
   height:100%;
+  margin: auto;
 }
 .landing-page .card-title a,.landing-page .card-title{
   color: #169a59;
@@ -717,7 +718,7 @@ color: #fff;
   width: 100%;
 }
 .footer .footer-small div.dropdown button{
-  width: 100%;
+  width: 100vw;
   background-color: #169a59;
   border-radius: 0;
   border: 2px solid #006539;
@@ -726,10 +727,21 @@ color: #fff;
   background-color: #006539;
 }
 .footer .footer-small div.dropdown-menu.show{
-  width: 96%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
+
+
+
+.footer .footer-small .show.dropdown{
+  margin-bottom: 200px;
+  width: 100%;
+}
+
+
+
 .footer .footer-small a{
   color: #169a59;
   text-decoration: none;

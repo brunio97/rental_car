@@ -162,8 +162,8 @@ const LandingPage = () => {
             <section className="programs">
             <Container >
                     <h2>Programs</h2>
-                    <Row className="prog-view" sm={12}>
-                        <Col sm={4}> 
+                    <Row className="prog-view" sm={12} >
+                        <Col > 
                             <Card>
                             <Card.Body>
                                 <Card.Title><a >Business Rentals</a></Card.Title>

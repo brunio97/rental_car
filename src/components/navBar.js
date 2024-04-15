@@ -277,7 +277,8 @@ return(
               </Col>
               <Col sm={columnsm} >
                 <Nav className="navtop" activeKey="/home">
-                  <Nav.Link  href="SignUp">SignUp</Nav.Link>
+                  {/*  <Nav.Link  href="SignUp">SignUp</Nav.Link>*/}
+                
                   <Nav.Link className= 'unactive-link'>Career <FaExternalLinkAlt className="exticon" /></Nav.Link>
                   <DropdownButton className={activeLink === 'help'? 'active-drop': 'drop'} onClick={()=> onUpdateLink('help')} id="help" title="Help">
                     <Dropdown.ItemText>HELP & FAQS</Dropdown.ItemText>
@@ -516,25 +517,6 @@ return(
           </Container> 
         </Navbar.Collapse>
     </Navbar>    
-
-
-    {/* <Navbar className={scrolled? "":"scrolled"} >
-      <Container>
-        <Nav className="me-auto">
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Container>
-    </Navbar> */}
   </section>
 );
 }

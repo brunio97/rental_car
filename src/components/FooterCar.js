@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container,  Row,Col,Dropdown } from "react-bootstrap";
 import { FaFacebook,FaTwitter,FaYoutube,FaExternalLinkAlt, FaMapMarkerAlt } from "react-icons/fa";
@@ -7,7 +7,33 @@ import appStore from '../assets/appStore.png'
 import { setwidth640 } from "./functions";
 const FooterCar =()=>{
     const [footerWidth, setFooterWidth] = useState(setwidth640());
+    const [isOpen, setIsOpen] = useState(Array(9).fill(false));
+
+   
     
+    const handleToggle = (nextOpenState, index) => {
+        if (!isOpen[index] && nextOpenState) {
+          window.scrollBy(0, 99999); 
+          
+          const element = document.getElementsByClassName('gtg')
+          console.log(element)
+          if (element){
+            console.log("acaacaa")
+           
+          }else{
+            console.log("nada")
+          } 
+        } 
+
+        const newIsOpen = [...isOpen];
+        newIsOpen[index] = nextOpenState; 
+        setIsOpen(newIsOpen);
+
+
+       
+      };
+
+
     useEffect(() => {
         const handleResize = () => {
             setFooterWidth(setwidth640());
@@ -25,11 +51,11 @@ const FooterCar =()=>{
                 {footerWidth?(
                     <Container className="footer-small">
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[0]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 0)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             CAR RENTAL
                             </Dropdown.Toggle>
-                            <Dropdown.Menu>
+                            <Dropdown.Menu className="gtg" >
                                 <Link to="/CarRental">Watch All Vehicles&gt;</Link><br/>
                                 <a className="unavailable" >Viwe/Modify/Cancel&gt;</a><br/>
                                 <Link to="/CurrentDeals">All Deals & Coupons&gt;</Link><br/>
@@ -41,7 +67,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[1]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 1)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             REPLACEMENT RENTALS
                             </Dropdown.Toggle>
@@ -55,7 +81,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[2]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 2)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUSINESSES
                             </Dropdown.Toggle>
@@ -68,7 +94,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[3]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 3)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             VEHICLES FOR RENT
                             </Dropdown.Toggle>
@@ -80,7 +106,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[4]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 4)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUY A CAR
                             </Dropdown.Toggle>
@@ -92,7 +118,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[5]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 5)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             CAR LOCATIONS
                             </Dropdown.Toggle>
@@ -106,7 +132,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[6]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 6)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             OTHER LOCATIONS
                             </Dropdown.Toggle>
@@ -120,7 +146,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown show={isOpen[7]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 7)}>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             BUY A CAR
                             </Dropdown.Toggle>
@@ -133,7 +159,7 @@ const FooterCar =()=>{
                         </Dropdown>
                         </Row>
                         <Row>
-                        <Dropdown>
+                        <Dropdown  show={isOpen[8]} onToggle={(nextOpenState) => handleToggle(nextOpenState, 8)} >
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                             PLAN YOUR PURCHASE
                             </Dropdown.Toggle>
@@ -144,6 +170,26 @@ const FooterCar =()=>{
                             </Dropdown.Menu>
                         </Dropdown>
                         </Row>
+                        <Row className="row-icons-footer">
+                        <Col > 
+                            <a id="facebook" href="" ><FaFacebook  className="icon-footer"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a id="youtube" href=""><FaYoutube  className="icon-footer"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a id="twitter" href=""><FaTwitter  className="icon-footer"/></a>
+                        </Col>                               
+                    </Row>
+                    <Row className="row-links-footer">
+                        <Col>
+                        <a href="">Terms of Use</a>
+                            <a href="">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="">Cookie Policy</a>
+                         </Col>
+                        </Row>
+                            <Row className="row-links-footer">  
+                            <Col>      
+                            <a href="">Privacy Choices</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="">Ad Choices</a>
+                        </Col>
+                    </Row>
                     </Container> 
                 ):(
                     <Container className="footer-lg">
@@ -240,7 +286,6 @@ const FooterCar =()=>{
                             <a href="">Privacy Choices</a>
                             <a href="">Ad Choices</a>
                         </Col>
-                            
                     </Row>
                   </Container>
                   )}
